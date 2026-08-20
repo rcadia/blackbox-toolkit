@@ -9,4 +9,36 @@ Claude Code skills for black-box QA against a live URL: recon, module mapping, a
 
 ## Install
 
-Add this repo as a marketplace and install the `blackbox-toolkit` plugin, then run `/bb-recon <url>`. The plugin bundles the Playwright MCP server (via `mcpServers` in `plugin.json`) — no separate MCP setup needed.
+From GitHub, in any project:
+
+```bash
+claude plugin marketplace add rcadia/blackbox-toolkit
+claude plugin install blackbox-toolkit@blackbox-toolkit-marketplace
+```
+
+From a local checkout, for iterating on the skills themselves — edits show up on the next session restart, no push needed:
+
+```bash
+claude plugin marketplace add /path/to/blackbox-toolkit
+claude plugin install blackbox-toolkit@blackbox-toolkit-marketplace
+```
+
+The plugin bundles the Playwright MCP server (via `mcpServers` in `plugin.json`) — no separate MCP setup needed.
+
+## Use
+
+```bash
+/bb-recon <url>
+```
+
+Navigates the URL, saves a snapshot to `./bb-recon.md` at the project root. Re-running overwrites it — one file, one target at a time.
+
+## Update
+
+After pulling or pushing changes to an installed plugin:
+
+```bash
+claude plugin update blackbox-toolkit@blackbox-toolkit-marketplace
+```
+
+Then restart the Claude Code session in that project — skills load at session start.
