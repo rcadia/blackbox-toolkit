@@ -1,0 +1,12 @@
+{
+  "name": "blackbox-toolkit-marketplace",
+  "description": "Personal marketplace hosting black-box QA plugins, starting with blackbox-toolkit.",
+  "owner": { "name": "Ross Alejandro" },
+  "plugins": [
+    {
+      "name": "blackbox-toolkit",
+      "source": "./",
+      "description": "Black-box QA against a live URL, no source access: bb-recon (network/header fingerprinting, nav/module mapping, inferred business purpose and risk areas) via Playwright MCP. bb-test-cases and bb-explore are planned to follow, consuming bb-recon's snapshot."
+    }
+  ]
+}

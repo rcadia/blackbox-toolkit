@@ -1,0 +1,13 @@
+{
+  "name": "blackbox-toolkit",
+  "displayName": "Blackbox Toolkit",
+  "version": "0.1.0",
+  "description": "Black-box QA toolkit for a live URL with no source or project access: bb-recon fingerprints tech stack, maps visible modules/nav, and infers purpose and risk areas via Playwright. bb-test-cases and bb-explore (planned) will consume its output.",
+  "author": { "name": "Ross Alejandro" },
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp"]
+    }
+  }
+}
